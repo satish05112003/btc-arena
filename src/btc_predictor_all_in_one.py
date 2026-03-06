@@ -1304,55 +1304,34 @@ def auto_retrain_loop(tracker: PerformanceTracker, bot: TelegramBot):
     mistakes = tracker.mistake_count()
     
     bot.send(
-        f"BTC Prediction Arena
+        f"""BTC Prediction Arena
 
-"
-        f"Status: LIVE
-"
-        f"Data Source: Coinbase WebSocket
-"
-        f"Symbol: {SYMBOL}
 
-"
-        f"Channels
-"
-        f"ticker
-"
-        f"matches
-"
-        f"level2
-"
-        f"
-"
-        f"Signals
-"
-        f"5 min
-"
-        f"15 min
-"
-        f"
-"
-        f"Performance
-"
-        f"Accuracy: {fs['accuracy']}%
-"
-        f"Evaluated: {fs['total']}
-"
-        f"Mistakes: {mistakes}
-"
-        f"
-"
-        f"Today
-"
-        f"Accuracy: {st['accuracy']}%
-"
-        f"Sent: {today_total}
-"
-        f"Pending: {fs['pending']}
-"
-        f"
-"
-        f"Use /help to see available commands.",
+Status: LIVE
+Data Source: Coinbase WebSocket
+Symbol: {SYMBOL}
+
+
+Channels
+ticker
+matches
+level2
+
+Signals
+5 min
+15 min
+
+Performance
+Accuracy: {fs['accuracy']}%
+Evaluated: {fs['total']}
+Mistakes: {mistakes}
+
+Today
+Accuracy: {st['accuracy']}%
+Sent: {today_total}
+Pending: {fs['pending']}
+
+Use /help to see available commands.""",
         parse_mode=""
     )
 
