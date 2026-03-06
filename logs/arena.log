@@ -1,0 +1,615 @@
+2026-03-05 19:22:00,863 [INFO] ============================================================
+2026-03-05 19:22:00,863 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 19:22:00,863 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 19:22:00,863 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 19:22:00,864 [INFO] ============================================================
+2026-03-05 19:22:01,828 [INFO] Loaded 5m model | features=26 | acc=0.5141 | trained=2026-03-05
+2026-03-05 19:22:01,834 [INFO] Loaded 15m model | features=26 | acc=0.5216 | trained=2026-03-05
+2026-03-05 19:22:12,508 [INFO] Telegram command: /last from 1699204119
+2026-03-05 19:22:12,521 [INFO] Telegram command: /help from 1699204119
+2026-03-05 19:22:12,664 [INFO] Starting Coinbase WebSocket stream...
+2026-03-05 19:22:12,671 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 19:22:14,334 [INFO] Telegram command: /help from 1699204119
+2026-03-05 19:22:40,534 [INFO] Telegram command: /help from 1699204119
+2026-03-05 19:25:00,315 [INFO] [5m] Candle closed: O=72683.69 H=72715.64 L=72622.98 C=72636.03 V=15.3736
+2026-03-05 19:25:00,315 [INFO] [5m] Building history (1/60)...
+2026-03-05 19:25:01,175 [INFO] Telegram command: /help from 1699204119
+2026-03-05 19:27:54,448 [INFO] Telegram command: /last from 1699204119
+2026-03-05 19:30:00,150 [INFO] [5m] Candle closed: O=72633.02 H=72649.16 L=72404.95 C=72490.02 V=66.5299
+2026-03-05 19:30:00,152 [INFO] [5m] Building history (2/60)...
+2026-03-05 19:30:00,155 [INFO] [15m] Candle closed: O=72683.69 H=72715.64 L=72404.95 C=72490.02 V=81.9034
+2026-03-05 19:30:00,156 [INFO] [15m] Building history (1/60)...
+2026-03-05 19:35:00,111 [INFO] [5m] Candle closed: O=72502.07 H=72620.29 L=72457.67 C=72555.85 V=25.0471
+2026-03-05 19:35:00,112 [INFO] [5m] Building history (3/60)...
+2026-03-05 19:36:21,413 [INFO] ============================================================
+2026-03-05 19:36:21,413 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 19:36:21,414 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 19:36:21,414 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 19:36:21,414 [INFO] ============================================================
+2026-03-05 19:36:22,195 [INFO] Loaded historical candles for warm start
+2026-03-05 19:36:23,089 [INFO] Loaded 5m model | features=26 | acc=0.5141 | trained=2026-03-05
+2026-03-05 19:36:23,094 [INFO] Loaded 15m model | features=26 | acc=0.5216 | trained=2026-03-05
+2026-03-05 19:36:28,758 [INFO] Starting Coinbase WebSocket stream...
+2026-03-05 19:36:28,759 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 19:38:11,511 [INFO] Stopped by user.
+2026-03-05 19:38:14,461 [INFO] ============================================================
+2026-03-05 19:38:14,461 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 19:38:14,461 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 19:38:14,461 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 19:38:14,462 [INFO] ============================================================
+2026-03-05 19:38:15,237 [INFO] Loaded historical candles for warm start
+2026-03-05 19:38:16,108 [INFO] Loaded 5m model | features=26 | acc=0.5141 | trained=2026-03-05
+2026-03-05 19:38:16,113 [INFO] Loaded 15m model | features=26 | acc=0.5216 | trained=2026-03-05
+2026-03-05 19:38:22,728 [INFO] Starting Coinbase WebSocket stream...
+2026-03-05 19:38:22,732 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 19:38:28,830 [INFO] Coinbase WebSocket connected
+2026-03-05 19:40:00,098 [INFO] [5m] Candle closed: O=72373.10 H=72556.46 L=72331.02 C=72540.21 V=22.5876
+2026-03-05 19:40:00,143 [ERROR] Candle callback error: The column label 'timestamp' is not unique.
+Traceback (most recent call last):
+  File "C:\Users\satis\OneDrive\Desktop\arena-btc\src\btc_predictor_all_in_one.py", line 173, in _fire_callbacks
+    cb(candle)
+    ~~^^^^^^^^
+  File "C:\Users\satis\OneDrive\Desktop\arena-btc\src\btc_predictor_all_in_one.py", line 847, in on_candle_close
+    candle_df = candle_builder.get_history_df()
+  File "C:\Users\satis\OneDrive\Desktop\arena-btc\src\btc_predictor_all_in_one.py", line 190, in get_history_df
+    df = df.sort_values("timestamp").reset_index(drop=True)
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\satis\OneDrive\Desktop\arena-btc\venv\Lib\site-packages\pandas\core\frame.py", line 8347, in sort_values
+    k = self._get_label_or_level_values(by[0], axis=axis)
+  File "C:\Users\satis\OneDrive\Desktop\arena-btc\venv\Lib\site-packages\pandas\core\generic.py", line 1792, in _get_label_or_level_values
+    raise ValueError(
+        f"The {label_axis_name} label '{key}' is not unique.{multi_message}"
+    )
+ValueError: The column label 'timestamp' is not unique.
+2026-03-05 19:41:51,641 [INFO] Telegram command: /last from 1699204119
+2026-03-05 19:42:09,029 [INFO] Telegram command: /help from 1699204119
+2026-03-05 19:42:54,172 [INFO] Stopped by user.
+2026-03-05 19:43:02,647 [INFO] ============================================================
+2026-03-05 19:43:02,647 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 19:43:02,647 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 19:43:02,647 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 19:43:02,647 [INFO] ============================================================
+2026-03-05 19:43:03,392 [INFO] Loaded historical candles for warm start
+2026-03-05 19:43:04,293 [INFO] Loaded 5m model | features=26 | acc=0.5141 | trained=2026-03-05
+2026-03-05 19:43:04,299 [INFO] Loaded 15m model | features=26 | acc=0.5216 | trained=2026-03-05
+2026-03-05 19:43:09,281 [INFO] Starting Coinbase WebSocket stream...
+2026-03-05 19:43:09,286 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 19:43:19,301 [WARNING] WebSocket error: timed out during opening handshake ó reconnecting in 5s
+2026-03-05 19:43:24,313 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 19:43:30,098 [INFO] Coinbase WebSocket connected
+2026-03-05 19:44:27,784 [INFO] Telegram command: /dashboard from 1699204119
+2026-03-05 19:45:00,282 [INFO] [5m] Candle closed: O=72566.64 H=72658.00 L=72559.53 C=72636.36 V=24.2273
+2026-03-05 19:45:00,284 [INFO] [15m] Candle closed: O=72566.64 H=72658.00 L=72559.53 C=72636.36 V=24.2273
+2026-03-05 19:45:00,338 [INFO] [15m] Prediction: SKIP | P(UP)=57.2% | P(DOWN)=42.8% | Conf=57.2%
+2026-03-05 19:45:00,340 [INFO] [5m] Prediction: SKIP | P(UP)=51.9% | P(DOWN)=48.1% | Conf=51.9%
+2026-03-05 19:45:02,112 [INFO] Telegram command: /accuracy from 1699204119
+2026-03-05 19:50:00,051 [INFO] [5m] Candle closed: O=72625.00 H=72643.63 L=72435.35 C=72511.39 V=44.7162
+2026-03-05 19:50:00,092 [INFO] [5m] Prediction: SKIP | P(UP)=52.7% | P(DOWN)=47.3% | Conf=52.7%
+2026-03-05 19:55:00,089 [INFO] [5m] Candle closed: O=72511.38 H=72642.00 L=72426.99 C=72517.21 V=67.2009
+2026-03-05 19:55:00,109 [INFO] [5m] Prediction: SKIP | P(UP)=52.7% | P(DOWN)=47.3% | Conf=52.7%
+2026-03-05 20:00:00,235 [INFO] [5m] Candle closed: O=72517.21 H=72621.87 L=72484.27 C=72575.97 V=30.0358
+2026-03-05 20:00:00,237 [INFO] [15m] Candle closed: O=72625.00 H=72643.63 L=72426.99 C=72575.97 V=141.9530
+2026-03-05 20:00:00,271 [INFO] [5m] Prediction: SKIP | P(UP)=51.9% | P(DOWN)=48.1% | Conf=51.9%
+2026-03-05 20:00:00,272 [INFO] [15m] Prediction: SKIP | P(UP)=57.3% | P(DOWN)=42.7% | Conf=57.3%
+2026-03-05 20:01:30,066 [INFO] Stopped by user.
+2026-03-05 20:01:39,688 [INFO] ============================================================
+2026-03-05 20:01:39,689 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 20:01:39,689 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 20:01:39,690 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 20:01:39,690 [INFO] ============================================================
+2026-03-05 20:01:40,660 [INFO] Loaded historical candles for warm start
+2026-03-05 20:01:41,580 [INFO] Loaded 5m model | features=26 | acc=0.5141 | trained=2026-03-05
+2026-03-05 20:01:41,586 [INFO] Loaded 15m model | features=26 | acc=0.5216 | trained=2026-03-05
+2026-03-05 20:01:46,415 [INFO] Starting Coinbase WebSocket stream...
+2026-03-05 20:01:46,422 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 20:01:55,041 [INFO] Coinbase WebSocket connected
+2026-03-05 20:03:23,653 [INFO] Stopped by user.
+2026-03-05 20:04:28,663 [INFO] ============================================================
+2026-03-05 20:04:28,663 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 20:04:28,663 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 20:04:28,663 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 20:04:28,664 [INFO] ============================================================
+2026-03-05 20:04:29,356 [INFO] Loaded historical candles for warm start
+2026-03-05 20:04:30,231 [INFO] Loaded 5m model | features=26 | acc=0.5141 | trained=2026-03-05
+2026-03-05 20:04:30,235 [INFO] Loaded 15m model | features=26 | acc=0.5216 | trained=2026-03-05
+2026-03-05 20:04:35,098 [INFO] Starting Coinbase WebSocket stream...
+2026-03-05 20:04:35,100 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 20:04:45,128 [WARNING] WebSocket error: timed out during opening handshake ó reconnecting in 5s
+2026-03-05 20:04:50,137 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 20:04:55,825 [INFO] Coinbase WebSocket connected
+2026-03-05 20:07:39,045 [INFO] Stopped by user.
+2026-03-05 21:11:04,973 [INFO] ============================================================
+2026-03-05 21:11:04,974 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 21:11:04,974 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 21:11:04,974 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 21:11:04,974 [INFO] ============================================================
+2026-03-05 21:11:05,850 [INFO] Loaded historical candles for warm start
+2026-03-05 21:11:07,401 [INFO] Loaded 5m model | features=26 | acc=0.5141 | trained=2026-03-05
+2026-03-05 21:11:07,408 [INFO] Loaded 15m model | features=26 | acc=0.5216 | trained=2026-03-05
+2026-03-05 21:11:08,634 [INFO] Starting Coinbase WebSocket stream...
+2026-03-05 21:11:08,637 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:11:09,870 [INFO] Coinbase WebSocket connected
+2026-03-05 21:22:11,765 [WARNING] WebSocket error: sent 1011 (internal error) keepalive ping timeout; no close frame received ó reconnecting in 5s
+2026-03-05 21:22:16,780 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:22:18,011 [INFO] Coinbase WebSocket connected
+2026-03-05 21:27:39,954 [WARNING] WebSocket error: sent 1011 (internal error) keepalive ping timeout; no close frame received ó reconnecting in 5s
+2026-03-05 21:27:45,004 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:27:45,008 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 21:27:50,010 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:27:50,013 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 21:27:55,020 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:27:55,026 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 21:28:00,043 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:28:00,045 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 21:28:05,052 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:28:05,059 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 21:28:10,066 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:28:20,088 [WARNING] WebSocket error: timed out during opening handshake ó reconnecting in 5s
+2026-03-05 21:28:25,091 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:28:26,488 [INFO] Coinbase WebSocket connected
+2026-03-05 21:34:05,879 [WARNING] WebSocket error: no close frame received or sent ó reconnecting in 5s
+2026-03-05 21:34:10,889 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:34:10,895 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 21:34:15,904 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:34:15,905 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 21:34:20,909 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:34:29,532 [INFO] Coinbase WebSocket connected
+2026-03-05 21:42:21,377 [INFO] Stopped by user.
+2026-03-05 21:42:26,953 [INFO] ============================================================
+2026-03-05 21:42:26,953 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 21:42:26,953 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 21:42:26,954 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 21:42:26,954 [INFO] ============================================================
+2026-03-05 21:42:27,675 [INFO] Loaded historical candles for warm start
+2026-03-05 21:42:28,821 [INFO] Loaded 5m model | features=26 | acc=0.5141 | trained=2026-03-05
+2026-03-05 21:42:28,828 [INFO] Loaded 15m model | features=26 | acc=0.5216 | trained=2026-03-05
+2026-03-05 21:42:39,287 [INFO] Starting Coinbase WebSocket stream...
+2026-03-05 21:42:39,296 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:42:46,072 [INFO] Coinbase WebSocket connected
+2026-03-05 21:43:49,150 [INFO] Telegram command: /help from 1699204119
+2026-03-05 21:44:14,339 [INFO] Telegram command: /status from 1699204119
+2026-03-05 21:44:41,571 [INFO] Telegram command: /accuracy from 1699204119
+2026-03-05 21:45:01,421 [INFO] Telegram command: /accuracy from 1699204119
+2026-03-05 21:45:41,575 [INFO] Telegram command: /accuracy_chat from 1699204119
+2026-03-05 21:52:19,562 [INFO] Stopped by user.
+2026-03-05 21:52:45,217 [INFO] ============================================================
+2026-03-05 21:52:45,219 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 21:52:45,219 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 21:52:45,219 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 21:52:45,219 [INFO] ============================================================
+2026-03-05 21:52:45,946 [INFO] Loaded historical candles for warm start
+2026-03-05 21:52:46,762 [INFO] Loaded 5m model | features=26 | acc=0.5141 | trained=2026-03-05
+2026-03-05 21:52:46,766 [INFO] Loaded 15m model | features=26 | acc=0.5216 | trained=2026-03-05
+2026-03-05 21:52:50,112 [INFO] Starting Coinbase WebSocket stream and scheduler backup...
+2026-03-05 21:52:50,114 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 21:52:54,613 [INFO] Coinbase WebSocket connected
+2026-03-05 21:55:00,418 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73 V=69.4998
+2026-03-05 21:55:00,471 [INFO] [5m] Prediction: SKIP | P(UP)=47.9% | P(DOWN)=52.0% | Conf=52.0%
+2026-03-05 22:00:00,901 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73 V=69.4998
+2026-03-05 22:00:00,918 [INFO] [5m] Prediction: SKIP | P(UP)=47.9% | P(DOWN)=52.0% | Conf=52.0%
+2026-03-05 22:00:09,984 [INFO] [15m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=72974.18 V=93.6765
+2026-03-05 22:00:09,998 [INFO] [15m] Prediction: SKIP | P(UP)=47.5% | P(DOWN)=52.5% | Conf=52.5%
+2026-03-05 22:01:30,460 [INFO] Telegram command: /accuracy from 1699204119
+2026-03-05 22:05:00,838 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73 V=69.4998
+2026-03-05 22:05:00,857 [INFO] [5m] Prediction: SKIP | P(UP)=47.9% | P(DOWN)=52.0% | Conf=52.0%
+2026-03-05 22:08:34,853 [WARNING] WebSocket error: no close frame received or sent ó reconnecting in 5s
+2026-03-05 22:08:39,900 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:08:40,348 [WARNING] WebSocket error: [WinError 64] The specified network name is no longer available ó reconnecting in 5s
+2026-03-05 22:08:45,361 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:08:45,831 [WARNING] WebSocket error: [WinError 64] The specified network name is no longer available ó reconnecting in 5s
+2026-03-05 22:08:50,840 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:08:51,126 [WARNING] WebSocket error: [WinError 64] The specified network name is no longer available ó reconnecting in 5s
+2026-03-05 22:08:56,132 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:08:56,144 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 22:09:01,151 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:09:01,376 [WARNING] WebSocket error: [WinError 64] The specified network name is no longer available ó reconnecting in 5s
+2026-03-05 22:09:06,381 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:09:06,578 [WARNING] WebSocket error: [WinError 64] The specified network name is no longer available ó reconnecting in 5s
+2026-03-05 22:09:11,583 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:09:11,785 [WARNING] WebSocket error: [WinError 64] The specified network name is no longer available ó reconnecting in 5s
+2026-03-05 22:09:16,799 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:09:18,018 [INFO] Coinbase WebSocket connected
+2026-03-05 22:09:49,124 [WARNING] WebSocket error: no close frame received or sent ó reconnecting in 5s
+2026-03-05 22:09:54,171 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:09:55,874 [INFO] Coinbase WebSocket connected
+2026-03-05 22:10:00,624 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73 V=69.4998
+2026-03-05 22:10:00,697 [INFO] [5m] Prediction: SKIP | P(UP)=47.9% | P(DOWN)=52.0% | Conf=52.0%
+2026-03-05 22:15:00,244 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73 V=69.4998
+2026-03-05 22:15:00,260 [INFO] [5m] Prediction: SKIP | P(UP)=47.9% | P(DOWN)=52.0% | Conf=52.0%
+2026-03-05 22:15:04,594 [INFO] [15m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=72974.18 V=93.6765
+2026-03-05 22:15:04,607 [INFO] [15m] Prediction: SKIP | P(UP)=47.5% | P(DOWN)=52.5% | Conf=52.5%
+2026-03-05 22:19:57,162 [WARNING] WebSocket error: no close frame received or sent ó reconnecting in 5s
+2026-03-05 22:20:00,694 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73 V=69.4998
+2026-03-05 22:20:00,724 [INFO] [5m] Prediction: SKIP | P(UP)=47.9% | P(DOWN)=52.0% | Conf=52.0%
+2026-03-05 22:20:02,175 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:20:04,079 [INFO] Coinbase WebSocket connected
+2026-03-05 22:20:51,567 [INFO] Stopped by user.
+2026-03-05 22:36:16,973 [INFO] ============================================================
+2026-03-05 22:36:16,974 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 22:36:16,974 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 22:36:16,975 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 22:36:16,975 [INFO] ============================================================
+2026-03-05 22:36:17,632 [INFO] Loaded historical candles for warm start
+2026-03-05 22:36:18,773 [INFO] Loaded dual 5m models | acc=0.4988 | trained=2026-03-05
+2026-03-05 22:36:19,146 [INFO] Loaded dual 15m models | acc=0.5013 | trained=2026-03-05
+2026-03-05 22:36:20,356 [INFO] Starting Coinbase WebSocket stream and scheduler backup...
+2026-03-05 22:36:20,359 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:36:21,741 [INFO] Coinbase WebSocket connected
+2026-03-05 22:40:00,521 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73
+2026-03-05 22:40:00,569 [INFO] [5m] Prediction: UP | P(UP)=69.5% | P(DOWN)=30.6% | Conf=69.5%
+2026-03-05 22:45:01,004 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73
+2026-03-05 22:45:01,091 [INFO] [5m] Prediction: UP | P(UP)=69.5% | P(DOWN)=30.6% | Conf=69.5%
+2026-03-05 22:45:02,411 [INFO] [15m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=72974.18
+2026-03-05 22:45:02,466 [INFO] [15m] Prediction: UP | P(UP)=71.4% | P(DOWN)=28.6% | Conf=71.4%
+2026-03-05 22:45:30,475 [INFO] Stopped by user.
+2026-03-05 22:45:35,241 [INFO] ============================================================
+2026-03-05 22:45:35,242 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 22:45:35,242 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 22:45:35,243 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 22:45:35,243 [INFO] ============================================================
+2026-03-05 22:45:35,887 [INFO] Loaded historical candles for warm start
+2026-03-05 22:45:36,636 [INFO] Loaded 5m model | acc=0.4988 | trained=2026-03-05
+2026-03-05 22:45:36,642 [INFO] Loaded 15m model | acc=0.5013 | trained=2026-03-05
+2026-03-05 22:45:37,782 [INFO] Starting Coinbase WebSocket stream and scheduler backup...
+2026-03-05 22:45:37,786 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:45:39,036 [INFO] Coinbase WebSocket connected
+2026-03-05 22:48:21,448 [INFO] Stopped by user.
+2026-03-05 22:48:24,040 [INFO] ============================================================
+2026-03-05 22:48:24,040 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 22:48:24,040 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 22:48:24,041 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 22:48:24,041 [INFO] ============================================================
+2026-03-05 22:48:24,676 [INFO] Loaded historical candles for warm start
+2026-03-05 22:48:25,401 [INFO] Loaded 5m model | acc=0.4988 | trained=2026-03-05
+2026-03-05 22:48:25,406 [INFO] Loaded 15m model | acc=0.5013 | trained=2026-03-05
+2026-03-05 22:48:35,425 [INFO] Starting Coinbase WebSocket stream and scheduler backup...
+2026-03-05 22:48:35,430 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:48:45,448 [WARNING] WebSocket error: timed out during opening handshake ó reconnecting in 5s
+2026-03-05 22:48:50,468 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:48:50,471 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 22:48:55,480 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:48:55,483 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 22:49:00,492 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:49:01,823 [INFO] Coinbase WebSocket connected
+2026-03-05 22:50:00,346 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73
+2026-03-05 22:50:00,377 [ERROR] Prediction error (5m): The number of features in data (33) is not the same as it was in training data (26).
+You can set ``predict_disable_shape_check=true`` to discard this error, but please be aware what you are doing.
+2026-03-05 22:50:00,377 [WARNING] [5m] Model not loaded
+2026-03-05 22:53:10,909 [INFO] Stopped by user.
+2026-03-05 22:55:53,680 [INFO] ============================================================
+2026-03-05 22:55:53,681 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 22:55:53,681 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 22:55:53,682 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 22:55:53,682 [INFO] ============================================================
+2026-03-05 22:55:54,339 [INFO] Loaded historical candles for warm start
+2026-03-05 22:55:55,169 [INFO] Loaded 5m model | acc=0.5128 | trained=2026-03-05
+2026-03-05 22:55:55,275 [INFO] Loaded 15m model | acc=0.5221 | trained=2026-03-05
+2026-03-05 22:55:56,505 [INFO] Starting Coinbase WebSocket stream and scheduler backup...
+2026-03-05 22:55:56,508 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 22:55:57,981 [INFO] Coinbase WebSocket connected
+2026-03-05 23:00:00,116 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73
+2026-03-05 23:00:00,251 [INFO] [5m] Prediction: DOWN | P(UP)=44.7% | P(DOWN)=55.3% | Conf=55.3%
+2026-03-05 23:00:00,564 [ERROR] Global exception: Invalid format string. Restarting...
+2026-03-05 23:00:05,566 [INFO] ============================================================
+2026-03-05 23:00:05,567 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 23:00:05,568 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 23:00:05,568 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 23:00:05,568 [INFO] ============================================================
+2026-03-05 23:00:07,128 [INFO] Loaded historical candles for warm start
+2026-03-05 23:00:08,743 [INFO] Starting Coinbase WebSocket stream and scheduler backup...
+2026-03-05 23:00:08,743 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:00:09,971 [INFO] Coinbase WebSocket connected
+2026-03-05 23:05:00,770 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73
+2026-03-05 23:05:00,833 [INFO] [5m] Prediction: DOWN | P(UP)=44.7% | P(DOWN)=55.3% | Conf=55.3%
+2026-03-05 23:05:01,106 [ERROR] Global exception: Invalid format string. Restarting...
+2026-03-05 23:05:06,108 [INFO] ============================================================
+2026-03-05 23:05:06,108 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 23:05:06,109 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 23:05:06,109 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 23:05:06,109 [INFO] ============================================================
+2026-03-05 23:05:06,848 [INFO] Loaded historical candles for warm start
+2026-03-05 23:05:07,979 [INFO] Starting Coinbase WebSocket stream and scheduler backup...
+2026-03-05 23:05:07,980 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:05:09,308 [INFO] Coinbase WebSocket connected
+2026-03-05 23:07:59,760 [INFO] Stopped by user.
+2026-03-05 23:08:02,154 [INFO] ============================================================
+2026-03-05 23:08:02,155 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 23:08:02,155 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 23:08:02,155 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 23:08:02,155 [INFO] ============================================================
+2026-03-05 23:08:02,824 [INFO] Loaded historical candles for warm start
+2026-03-05 23:08:03,934 [INFO] Loaded 5m model | acc=0.5128 | trained=2026-03-05
+2026-03-05 23:08:04,039 [INFO] Loaded 15m model | acc=0.5221 | trained=2026-03-05
+2026-03-05 23:08:14,063 [INFO] Starting Coinbase WebSocket stream and scheduler backup...
+2026-03-05 23:08:14,076 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:08:24,122 [WARNING] WebSocket error: timed out during opening handshake ó reconnecting in 5s
+2026-03-05 23:08:29,132 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:08:30,227 [WARNING] WebSocket error: Multiple exceptions: [WinError 1236] The network connection was aborted by the local system, [WinError 1231] The network location cannot be reached. For information about network troubleshooting, see Windows Help ó reconnecting in 5s
+2026-03-05 23:08:35,243 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:08:35,246 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:08:40,255 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:08:40,258 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:08:45,274 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:08:45,277 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:08:50,284 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:08:50,287 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:08:55,301 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:08:55,304 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:09:00,320 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:09:00,325 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:09:05,341 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:09:05,343 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:09:10,353 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:09:10,357 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:09:15,367 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:09:15,370 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:09:20,381 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:09:20,384 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:09:25,388 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:09:25,391 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:09:30,403 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:09:30,406 [WARNING] WebSocket error: [Errno 11001] getaddrinfo failed ó reconnecting in 5s
+2026-03-05 23:09:35,414 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:09:36,657 [INFO] Coinbase WebSocket connected
+2026-03-05 23:10:00,087 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73
+2026-03-05 23:10:00,150 [INFO] [5m] Prediction: DOWN | P(UP)=44.7% | P(DOWN)=55.3% | Conf=55.3%
+2026-03-05 23:15:00,232 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73
+2026-03-05 23:15:00,323 [INFO] [5m] Prediction: DOWN | P(UP)=44.7% | P(DOWN)=55.3% | Conf=55.3%
+2026-03-05 23:15:10,332 [INFO] [15m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=72974.18
+2026-03-05 23:15:10,390 [INFO] [15m] Prediction: DOWN | P(UP)=41.6% | P(DOWN)=58.4% | Conf=58.4%
+2026-03-05 23:15:10,398 [WARNING] WebSocket error: sent 1011 (internal error) keepalive ping timeout; no close frame received ó reconnecting in 5s
+2026-03-05 23:15:15,406 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:15:16,827 [INFO] Coinbase WebSocket connected
+2026-03-05 23:20:00,349 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73
+2026-03-05 23:20:00,400 [INFO] [5m] Prediction: DOWN | P(UP)=44.7% | P(DOWN)=55.3% | Conf=55.3%
+2026-03-05 23:23:31,062 [INFO] Stopped by user.
+2026-03-05 23:23:33,223 [INFO] ============================================================
+2026-03-05 23:23:33,223 [INFO]   BTC PREDICTION ARENA ó Starting
+2026-03-05 23:23:33,224 [INFO]   Live data : Coinbase WebSocket (BTC/USD)
+2026-03-05 23:23:33,224 [INFO]   ML models : Trained on Binance 5-year historical
+2026-03-05 23:23:33,224 [INFO] ============================================================
+2026-03-05 23:23:33,890 [INFO] Loaded historical candles for warm start
+2026-03-05 23:23:35,112 [INFO] Loaded 5m model | acc=0.5128 | trained=2026-03-05
+2026-03-05 23:23:35,234 [INFO] Loaded 15m model | acc=0.5221 | trained=2026-03-05
+2026-03-05 23:23:36,595 [INFO] Starting Coinbase WebSocket stream and scheduler backup...
+2026-03-05 23:23:36,598 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:23:37,875 [INFO] Coinbase WebSocket connected
+2026-03-05 23:24:59,591 [WARNING] WebSocket error: sent 1011 (internal error) keepalive ping timeout; no close frame received ó reconnecting in 5s
+2026-03-05 23:25:00,486 [INFO] [5m] Candle closed: O=72903.28 H=73063.38 L=72886.59 C=73051.73
+2026-03-05 23:25:00,538 [INFO] [5m] Prediction: UP | P(UP)=50.4% P(DOWN)=49.6% Conf=50.4%
+2026-03-05 23:25:10,552 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:25:20,563 [WARNING] WebSocket error: timed out during opening handshake ó reconnecting in 5s
+2026-03-05 23:25:25,573 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:25:35,587 [WARNING] WebSocket error: timed out during opening handshake ó reconnecting in 5s
+2026-03-05 23:25:40,602 [INFO] Connecting to Coinbase WebSocket...
+2026-03-05 23:25:41,790 [INFO] Coinbase WebSocket connected
+2026-03-06 02:09:57,596 [INFO] ============================================================
+2026-03-06 02:09:57,597 [INFO]   BTC PREDICTION ARENA ‚Äî Starting
+2026-03-06 02:09:57,597 [INFO]   WebSocket : wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:09:57,597 [INFO]   Symbol    : BTC-USD
+2026-03-06 02:09:57,597 [INFO]   Channels  : ticker, matches, level2_batch
+2026-03-06 02:09:57,598 [INFO] ============================================================
+2026-03-06 02:09:58,158 [INFO] Preloaded 200 historical candles for 5m
+2026-03-06 02:09:58,361 [INFO] Preloaded 200 historical candles for 15m
+2026-03-06 02:10:06,118 [INFO] Loaded 5m model | acc=0.5128 | trained=2026-03-05
+2026-03-06 02:10:06,236 [INFO] Loaded 15m model | acc=0.5221 | trained=2026-03-05
+2026-03-06 02:10:07,943 [INFO] Starting WebSocket stream...
+2026-03-06 02:10:07,947 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:10:10,197 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 02:10:10,670 [INFO] Subscription confirmed: [{'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'level2_50', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 02:10:12,301 [WARNING] WebSocket disconnected: sent 1009 (message too big) frame after reading 1043125 bytes exceeds limit of 1048576 bytes; no close frame received ‚Äî reconnecting in 5s
+2026-03-06 02:10:17,311 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:10:18,884 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 02:10:19,249 [INFO] Subscription confirmed: [{'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'level2_50', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 02:10:20,981 [WARNING] WebSocket disconnected: sent 1009 (message too big) frame after reading 1043126 bytes exceeds limit of 1048576 bytes; no close frame received ‚Äî reconnecting in 5s
+2026-03-06 02:10:25,996 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:10:27,955 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 02:10:28,354 [INFO] Subscription confirmed: [{'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'level2_50', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 02:10:30,187 [WARNING] WebSocket disconnected: sent 1009 (message too big) frame after reading 1042993 bytes exceeds limit of 1048576 bytes; no close frame received ‚Äî reconnecting in 5s
+2026-03-06 02:10:35,188 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:10:36,854 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 02:10:37,253 [INFO] Subscription confirmed: [{'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'level2_50', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 02:10:38,864 [WARNING] WebSocket disconnected: sent 1009 (message too big) frame after reading 1043267 bytes exceeds limit of 1048576 bytes; no close frame received ‚Äî reconnecting in 5s
+2026-03-06 02:10:43,873 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:10:45,478 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 02:10:45,863 [INFO] Subscription confirmed: [{'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'level2_50', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 02:10:47,482 [WARNING] WebSocket disconnected: sent 1009 (message too big) frame after reading 1043396 bytes exceeds limit of 1048576 bytes; no close frame received ‚Äî reconnecting in 5s
+2026-03-06 02:10:52,495 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:10:54,201 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 02:10:54,599 [INFO] Subscription confirmed: [{'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'level2_50', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 02:10:56,379 [WARNING] WebSocket disconnected: sent 1009 (message too big) frame after reading 1043401 bytes exceeds limit of 1048576 bytes; no close frame received ‚Äî reconnecting in 5s
+2026-03-06 02:10:57,466 [INFO] Stopped by user.
+2026-03-06 02:12:46,779 [INFO] ============================================================
+2026-03-06 02:12:46,780 [INFO]   BTC PREDICTION ARENA ‚Äî Starting
+2026-03-06 02:12:46,781 [INFO]   WebSocket : wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:12:46,781 [INFO]   Symbol    : BTC-USD
+2026-03-06 02:12:46,781 [INFO]   Channels  : ticker, matches
+2026-03-06 02:12:46,782 [INFO] ============================================================
+2026-03-06 02:12:47,291 [INFO] Preloaded 200 historical candles for 5m
+2026-03-06 02:12:47,466 [INFO] Preloaded 200 historical candles for 15m
+2026-03-06 02:12:48,498 [INFO] Loaded 5m model | acc=0.5128 | trained=2026-03-05
+2026-03-06 02:12:48,599 [INFO] Loaded 15m model | acc=0.5221 | trained=2026-03-05
+2026-03-06 02:12:49,864 [INFO] Starting WebSocket stream...
+2026-03-06 02:12:49,869 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:12:51,631 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 02:12:52,016 [INFO] Subscription confirmed: [{'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'level2_50', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 02:12:53,759 [WARNING] WebSocket disconnected: sent 1009 (message too big) frame after reading 1042981 bytes exceeds limit of 1048576 bytes; no close frame received ‚Äî reconnecting in 5s
+2026-03-06 02:12:58,772 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:13:00,402 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 02:13:00,807 [INFO] Subscription confirmed: [{'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'level2_50', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 02:13:02,522 [WARNING] WebSocket disconnected: sent 1009 (message too big) frame after reading 1043071 bytes exceeds limit of 1048576 bytes; no close frame received ‚Äî reconnecting in 5s
+2026-03-06 02:13:07,526 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:13:09,475 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 02:13:09,908 [INFO] Subscription confirmed: [{'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'level2_50', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 02:13:11,811 [WARNING] WebSocket disconnected: sent 1009 (message too big) frame after reading 1043021 bytes exceeds limit of 1048576 bytes; no close frame received ‚Äî reconnecting in 5s
+2026-03-06 02:13:16,815 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:13:17,072 [INFO] Stopped by user.
+2026-03-06 02:15:12,452 [INFO] ============================================================
+2026-03-06 02:15:12,453 [INFO]   BTC PREDICTION ARENA ‚Äî Starting
+2026-03-06 02:15:12,453 [INFO]   WebSocket : wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:15:12,453 [INFO]   Symbol    : BTC-USD
+2026-03-06 02:15:12,453 [INFO]   Channels  : ticker, matches
+2026-03-06 02:15:12,453 [INFO] ============================================================
+2026-03-06 02:15:12,932 [INFO] Preloaded 200 historical candles for 5m
+2026-03-06 02:15:13,103 [INFO] Preloaded 200 historical candles for 15m
+2026-03-06 02:15:14,141 [INFO] Loaded 5m model | acc=0.5128 | trained=2026-03-05
+2026-03-06 02:15:14,238 [INFO] Loaded 15m model | acc=0.5221 | trained=2026-03-05
+2026-03-06 02:15:15,635 [INFO] Starting WebSocket stream...
+2026-03-06 02:15:15,639 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 02:15:17,485 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 02:15:17,910 [INFO] Subscription confirmed: [{'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 02:19:59,595 [INFO] [5m] Candle closed: C=71,175.80
+2026-03-06 02:19:59,617 [INFO] [5m] Order flow | buy=16.9607 sell=18.6404 imbalance=-0.047
+2026-03-06 02:19:59,682 [INFO] [5m] ‚úÖ Signal: DOWN | P(UP)=49.0% P(DOWN)=51.0% | Price=$71,175.89 | RSI=56.7
+2026-03-06 02:20:01,092 [INFO] [5m] Telegram signal sent ‚úì | Price=$71,175.89 | DOWN
+2026-03-06 02:20:15,671 [INFO] [Heartbeat] Price=$71,160.01 fresh=True 5m_buy=20.1440 5m_sell=22.7073 trades=3983 5m_hist=201 15m_hist=200
+2026-03-06 02:23:08,525 [INFO] Telegram command: /accuracy from 1699204119
+2026-03-06 02:24:23,153 [INFO] Telegram command: /accuracy_chat from 1699204119
+2026-03-06 02:24:59,746 [INFO] [5m] Candle closed: C=71,179.31
+2026-03-06 02:24:59,747 [INFO] [5m] Resolved: DOWN vs UP ‚Üí ‚úó
+2026-03-06 02:24:59,751 [INFO] [5m] Order flow | buy=26.9226 sell=27.8271 imbalance=-0.017
+2026-03-06 02:24:59,777 [INFO] [5m] ‚úÖ Signal: DOWN | P(UP)=48.9% P(DOWN)=51.1% | Price=$71,187.86 | RSI=21.0
+2026-03-06 02:25:00,099 [INFO] Telegram command: /help from 1699204119
+2026-03-06 02:25:01,100 [INFO] [5m] Telegram signal sent ‚úì | Price=$71,187.86 | DOWN
+2026-03-06 02:25:15,681 [INFO] [Heartbeat] Price=$71,206.01 fresh=True 5m_buy=25.1227 5m_sell=24.7338 trades=4728 5m_hist=202 15m_hist=200
+2026-03-06 02:29:59,577 [INFO] [5m] Candle closed: C=71,233.32
+2026-03-06 02:29:59,578 [INFO] [15m] Candle closed: C=71,233.32
+2026-03-06 02:29:59,578 [INFO] [5m] Resolved: DOWN vs UP ‚Üí ‚úó
+2026-03-06 02:29:59,583 [INFO] [5m] Order flow | buy=14.6738 sell=28.4863 imbalance=-0.320
+2026-03-06 02:29:59,585 [INFO] [15m] Order flow | buy=14.6738 sell=28.4863 imbalance=-0.320
+2026-03-06 02:29:59,636 [INFO] [15m] ‚úÖ Signal: DOWN | P(UP)=48.2% P(DOWN)=51.8% | Price=$71,232.00 | RSI=55.2
+2026-03-06 02:29:59,640 [INFO] [5m] ‚úÖ Signal: DOWN | P(UP)=49.0% P(DOWN)=51.0% | Price=$71,232.00 | RSI=22.5
+2026-03-06 02:30:00,928 [INFO] [5m] Telegram signal sent ‚úì | Price=$71,232.00 | DOWN
+2026-03-06 02:30:00,993 [INFO] [15m] Telegram signal sent ‚úì | Price=$71,232.00 | DOWN
+2026-03-06 02:30:15,684 [INFO] [Heartbeat] Price=$71,253.08 fresh=True 5m_buy=14.9443 5m_sell=28.7290 trades=3790 5m_hist=203 15m_hist=201
+2026-03-06 02:34:59,733 [INFO] [5m] Candle closed: C=71,344.47
+2026-03-06 02:34:59,735 [INFO] [5m] Resolved: DOWN vs UP ‚Üí ‚úó
+2026-03-06 02:34:59,741 [INFO] [5m] Order flow | buy=11.4304 sell=19.6382 imbalance=-0.264
+2026-03-06 02:34:59,798 [INFO] [5m] ‚úÖ Signal: DOWN | P(UP)=46.4% P(DOWN)=53.6% | Price=$71,344.47 | RSI=25.7
+2026-03-06 02:35:02,909 [INFO] [5m] Telegram signal sent ‚úì | Price=$71,344.47 | DOWN
+2026-03-06 02:35:15,699 [INFO] [Heartbeat] Price=$71,345.02 fresh=True 5m_buy=11.4447 5m_sell=20.3444 trades=2686 5m_hist=204 15m_hist=201
+2026-03-06 02:39:59,846 [INFO] [5m] Candle closed: C=71,348.40
+2026-03-06 02:39:59,892 [INFO] [5m] Resolved: DOWN vs UP ‚Üí ‚úó
+2026-03-06 02:39:59,926 [INFO] [5m] Order flow | buy=7.1749 sell=11.3680 imbalance=-0.226
+2026-03-06 02:40:00,023 [INFO] [5m] ‚úÖ Signal: UP | P(UP)=51.3% P(DOWN)=48.7% | Price=$71,348.41 | RSI=25.8
+2026-03-06 02:40:03,092 [INFO] [5m] Telegram signal sent ‚úì | Price=$71,348.41 | UP
+2026-03-06 02:40:15,705 [INFO] [Heartbeat] Price=$71,324.11 fresh=True 5m_buy=6.0852 5m_sell=10.6627 trades=1600 5m_hist=205 15m_hist=201
+2026-03-06 02:40:33,447 [INFO] [Tracker] Loaded from CSV: 7 evaluated, 3 correct
+2026-03-06 02:41:02,358 [INFO] Telegram command: /stats from 1699204119
+2026-03-06 02:41:15,799 [INFO] Telegram command: /predictions from 1699204119
+2026-03-06 02:41:21,050 [INFO] Telegram command: /accuracy from 1699204119
+2026-03-06 02:41:34,475 [INFO] Telegram command: /accuracy_chat from 1699204119
+2026-03-06 02:41:46,206 [INFO] Telegram command: /dashboard from 1699204119
+2026-03-06 02:42:16,477 [INFO] Telegram command: /stats_today from 1699204119
+2026-03-06 02:42:34,387 [INFO] Telegram command: /loga from 1699204119
+2026-03-06 02:42:39,123 [INFO] Telegram command: /logs from 1699204119
+2026-03-06 02:43:01,150 [INFO] Telegram command: /dashboard from 1699204119
+2026-03-06 02:43:06,020 [INFO] Telegram command: /stats_today from 1699204119
+2026-03-06 02:43:45,211 [INFO] Telegram command: /predictions from 1699204119
+2026-03-06 02:44:59,864 [INFO] [5m] Candle closed: C=71,314.97
+2026-03-06 02:44:59,867 [INFO] [5m] Resolved: UP vs DOWN ‚Üí ‚úó
+2026-03-06 02:44:59,868 [INFO] [15m] Candle closed: C=71,314.97
+2026-03-06 02:44:59,877 [INFO] [5m] Order flow | buy=16.0053 sell=11.3823 imbalance=0.169
+2026-03-06 02:44:59,877 [INFO] [15m] Resolved: DOWN vs UP ‚Üí ‚úó
+2026-03-06 02:44:59,902 [INFO] [15m] Order flow | buy=16.0053 sell=11.3823 imbalance=0.169
+2026-03-06 02:45:00,075 [INFO] [5m] ‚úÖ Signal: UP | P(UP)=55.7% P(DOWN)=44.3% | Price=$71,314.97 | RSI=25.5
+2026-03-06 02:45:00,206 [INFO] [15m] ‚úÖ Signal: UP | P(UP)=76.6% P(DOWN)=23.4% | Price=$71,314.97 | RSI=29.1
+2026-03-06 02:45:02,113 [INFO] [5m] Telegram signal sent ‚úì | Price=$71,314.97 | UP
+2026-03-06 02:45:02,289 [INFO] [15m] Telegram signal sent ‚úì | Price=$71,314.97 | UP
+2026-03-06 02:45:15,714 [INFO] [Heartbeat] Price=$71,314.97 fresh=True 5m_buy=16.0447 5m_sell=10.9058 trades=1930 5m_hist=206 15m_hist=202
+2026-03-06 02:47:31,280 [INFO] Stopped by user.
+2026-03-06 03:03:36,262 [INFO] ============================================================
+2026-03-06 03:03:36,263 [INFO]   BTC PREDICTION ARENA ‚Äî Starting
+2026-03-06 03:03:36,263 [INFO]   WebSocket : wss://ws-feed.exchange.coinbase.com
+2026-03-06 03:03:36,263 [INFO]   Symbol    : BTC-USD
+2026-03-06 03:03:36,263 [INFO]   Channels  : ticker, matches
+2026-03-06 03:03:36,263 [INFO] ============================================================
+2026-03-06 03:03:37,208 [INFO] Preloaded 200 historical candles for 5m
+2026-03-06 03:03:37,515 [INFO] Preloaded 200 historical candles for 15m
+2026-03-06 03:03:39,668 [INFO]   Scaler loaded: scaler_5m.pkl
+2026-03-06 03:03:39,669 [INFO] [5m] Model loaded | acc=0.5122 | roc_auc=0.5244 | features=54 | trained=2026-03-05 | scaler=yes
+2026-03-06 03:03:40,007 [INFO]   Scaler loaded: scaler_15m.pkl
+2026-03-06 03:03:40,009 [INFO] [15m] Model loaded | acc=0.5125 | roc_auc=0.5213 | features=54 | trained=2026-03-05 | scaler=yes
+2026-03-06 03:03:40,017 [INFO] [Tracker] Loaded from CSV: 9 evaluated, 3 correct
+2026-03-06 03:03:41,549 [INFO] Starting WebSocket stream...
+2026-03-06 03:03:41,556 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 03:03:43,347 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 03:03:43,728 [INFO] Subscription confirmed: [{'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 03:04:42,721 [INFO] Telegram command: /predictions from user_id=1699204119
+2026-03-06 03:04:56,428 [INFO] Telegram command: /dashboard from user_id=1699204119
+2026-03-06 03:04:59,635 [INFO] [5m] Candle closed: C=71,434.69
+2026-03-06 03:04:59,644 [INFO] [5m] Order flow | buy=2.7653 sell=7.5127 imbalance=-0.462
+2026-03-06 03:04:59,785 [INFO] [5m] ‚úÖ Signal: UP | P(UP)=52.3% P(DOWN)=47.7% | Price=$71,432.19 | RSI=56.7
+2026-03-06 03:04:59,791 [INFO] [5m] Prediction logged ‚Üí window 03:00-03:05
+2026-03-06 03:05:01,123 [INFO] [5m] Telegram signal sent ‚úì | Price=$71,432.19 | UP
+2026-03-06 03:08:41,598 [INFO] [Heartbeat] Price=$71,136.00 fresh=True 5m_buy=18.1074 5m_sell=47.9337 trades=3903 5m_hist=201 15m_hist=200
+2026-03-06 03:09:59,750 [INFO] [5m] Candle closed: C=71,156.39
+2026-03-06 03:09:59,751 [ERROR] CSV update error: Error tokenizing data. C error: Expected 9 fields in line 11, saw 17
+
+2026-03-06 03:09:59,752 [INFO] [5m] ‚ùå Resolved: predicted UP | actual DOWN | price $71,156.39
+2026-03-06 03:09:59,859 [INFO] [5m] Order flow | buy=19.5800 sell=45.9496 imbalance=-0.402
+2026-03-06 03:09:59,982 [INFO] [5m] ‚úÖ Signal: UP | P(UP)=53.7% P(DOWN)=46.3% | Price=$71,157.99 | RSI=21.8
+2026-03-06 03:09:59,982 [INFO] [5m] Prediction logged ‚Üí window 03:05-03:10
+2026-03-06 03:10:01,229 [INFO] [5m] Telegram signal sent ‚úì | Price=$71,157.99 | UP
+2026-03-06 03:13:41,668 [INFO] [Heartbeat] Price=$71,175.48 fresh=True 5m_buy=13.6946 5m_sell=16.6425 trades=2683 5m_hist=202 15m_hist=200
+2026-03-06 03:14:59,623 [INFO] [5m] Candle closed: C=71,204.48
+2026-03-06 03:14:59,626 [INFO] [15m] Candle closed: C=71,204.48
+2026-03-06 03:14:59,627 [ERROR] CSV update error: Error tokenizing data. C error: Expected 9 fields in line 11, saw 17
+
+2026-03-06 03:14:59,628 [INFO] [5m] ‚úÖ Resolved: predicted UP | actual UP | price $71,204.48
+2026-03-06 03:14:59,644 [INFO] [5m] Order flow | buy=15.2240 sell=13.5155 imbalance=0.059
+2026-03-06 03:14:59,648 [INFO] [15m] Order flow | buy=15.2240 sell=13.5155 imbalance=0.059
+2026-03-06 03:15:00,739 [INFO] [5m] ‚úÖ Signal: UP | P(UP)=64.1% P(DOWN)=35.9% | Price=$71,204.48 | RSI=22.2
+2026-03-06 03:15:00,743 [INFO] [5m] Prediction logged ‚Üí window 03:15-03:20
+2026-03-06 03:15:00,748 [INFO] [15m] ‚úÖ Signal: DOWN | P(UP)=49.7% P(DOWN)=50.3% | Price=$71,204.48 | RSI=55.2
+2026-03-06 03:15:00,751 [INFO] [15m] Prediction logged ‚Üí window 03:15-03:30
+2026-03-06 03:15:05,128 [INFO] [5m] Telegram signal sent ‚úì | Price=$71,204.48 | UP
+2026-03-06 03:15:05,221 [INFO] [15m] Telegram signal sent ‚úì | Price=$71,204.48 | DOWN
+2026-03-06 03:18:41,731 [INFO] [Heartbeat] Price=$71,276.42 fresh=True 5m_buy=16.6383 5m_sell=11.0572 trades=2816 5m_hist=203 15m_hist=201
+2026-03-06 03:19:59,704 [INFO] [5m] Candle closed: C=71,329.18
+2026-03-06 03:19:59,707 [ERROR] CSV update error: Error tokenizing data. C error: Expected 9 fields in line 11, saw 17
+
+2026-03-06 03:19:59,707 [INFO] [5m] ‚úÖ Resolved: predicted UP | actual UP | price $71,329.18
+2026-03-06 03:19:59,714 [INFO] [5m] Order flow | buy=18.9757 sell=10.3920 imbalance=0.292
+2026-03-06 03:20:00,207 [INFO] [5m] ‚úÖ Signal: UP | P(UP)=51.9% P(DOWN)=48.1% | Price=$71,329.10 | RSI=25.7
+2026-03-06 03:20:00,210 [INFO] [5m] Prediction logged ‚Üí window 03:20-03:25
+2026-03-06 03:20:02,707 [INFO] [5m] Telegram signal sent ‚úì | Price=$71,329.10 | UP
+2026-03-06 18:48:33,896 [INFO] ============================================================
+2026-03-06 18:48:33,897 [INFO]   BTC PREDICTION ARENA ‚Äî Starting
+2026-03-06 18:48:33,897 [INFO]   WebSocket : wss://ws-feed.exchange.coinbase.com
+2026-03-06 18:48:33,897 [INFO]   Symbol    : BTC-USD
+2026-03-06 18:48:33,897 [INFO]   Channels  : ticker, matches
+2026-03-06 18:48:33,898 [INFO] ============================================================
+2026-03-06 18:48:34,493 [INFO] Preloaded 200 historical candles for 5m
+2026-03-06 18:48:34,704 [INFO] Preloaded 200 historical candles for 15m
+2026-03-06 18:48:44,149 [INFO]   Scaler loaded: scaler_5m.pkl
+2026-03-06 18:48:44,150 [INFO] [5m] Model loaded | acc=0.5122 | roc_auc=0.5244 | features=54 | trained=2026-03-05 | scaler=yes
+2026-03-06 18:48:44,430 [INFO]   Scaler loaded: scaler_15m.pkl
+2026-03-06 18:48:44,431 [INFO] [15m] Model loaded | acc=0.5125 | roc_auc=0.5213 | features=54 | trained=2026-03-05 | scaler=yes
+2026-03-06 18:48:45,869 [INFO] Starting WebSocket stream...
+2026-03-06 18:48:45,875 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 18:48:47,268 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 18:48:47,557 [INFO] Subscription confirmed: [{'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 18:49:59,565 [INFO] [5m] Candle closed: C=70,026.05
+2026-03-06 18:49:59,575 [INFO] [5m] Order flow | buy=4.0194 sell=4.0873 imbalance=-0.008
+2026-03-06 18:49:59,875 [INFO] [5m] ‚úÖ Signal: UP | P(UP)=52.3% P(DOWN)=47.7% | Price=$70,024.38 | RSI=56.7
+2026-03-06 18:49:59,885 [INFO] [5m] Prediction logged ‚Üí window 18:45-18:50
+2026-03-06 18:50:01,497 [INFO] [5m] Telegram signal sent ‚úì | Price=$70,024.38 | UP
+2026-03-06 18:51:14,287 [INFO] Stopped by user.
+2026-03-06 18:55:42,406 [INFO] ============================================================
+2026-03-06 18:55:42,406 [INFO]   BTC PREDICTION ARENA ‚Äî Starting
+2026-03-06 18:55:42,407 [INFO]   WebSocket : wss://ws-feed.exchange.coinbase.com
+2026-03-06 18:55:42,407 [INFO]   Symbol    : BTC-USD
+2026-03-06 18:55:42,407 [INFO]   Channels  : ticker, matches
+2026-03-06 18:55:42,407 [INFO] ============================================================
+2026-03-06 18:55:42,956 [INFO] Preloaded 200 historical candles for 5m
+2026-03-06 18:55:43,138 [INFO] Preloaded 200 historical candles for 15m
+2026-03-06 18:55:44,745 [INFO]   Scaler loaded: scaler_5m.pkl
+2026-03-06 18:55:44,746 [INFO] [5m] Model loaded | acc=0.5122 | roc_auc=0.5244 | features=54 | trained=2026-03-05 | scaler=yes
+2026-03-06 18:55:44,992 [INFO]   Scaler loaded: scaler_15m.pkl
+2026-03-06 18:55:44,992 [INFO] [15m] Model loaded | acc=0.5125 | roc_auc=0.5213 | features=54 | trained=2026-03-05 | scaler=yes
+2026-03-06 18:55:50,615 [INFO] Starting WebSocket stream...
+2026-03-06 18:55:50,618 [INFO] Connecting to Coinbase WebSocket: wss://ws-feed.exchange.coinbase.com
+2026-03-06 18:55:55,660 [INFO] ‚úÖ Coinbase WebSocket connected | Symbol: BTC-USD
+2026-03-06 18:55:56,076 [INFO] Subscription confirmed: [{'name': 'ticker', 'product_ids': ['BTC-USD'], 'account_ids': None}, {'name': 'matches', 'product_ids': ['BTC-USD'], 'account_ids': None}]
+2026-03-06 18:56:16,244 [INFO] Stopped by user.

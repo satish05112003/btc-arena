@@ -1,0 +1,36 @@
+{
+  "timeframe": "5m",
+  "trained_at": "2026-03-05T17:23:51.724591+00:00",
+  "training_rows": 454355,
+  "features": [
+    "price_return_1",
+    "price_return_3",
+    "price_return_5",
+    "momentum",
+    "EMA_9",
+    "EMA_21",
+    "ema_cross",
+    "rolling_std_10",
+    "rolling_std_20",
+    "RSI_14",
+    "MACD",
+    "MACD_signal",
+    "MACD_hist",
+    "volume",
+    "volume_change",
+    "hl_range",
+    "order_flow_imbalance",
+    "liquidity_proxy"
+  ],
+  "best_iteration": 78,
+  "metrics": {
+    "accuracy": 0.5128,
+    "precision": 0.5147,
+    "recall": 0.3938,
+    "f1": 0.4462,
+    "roc_auc": 0.5189,
+    "brier_score": 0.2508
+  },
+  "data_source": "Binance 5-year historical",
+  "data_file": "btc_5m_5years.csv"
+}
