@@ -821,13 +821,9 @@ class TelegramBot:
         if cmd == "/accuracy":
             s = self.tracker.stats()
             reply(
-                f"Prediction Accuracy
-
-"
-                f"All-time Accuracy: {s['accuracy']}%
-"
-                f"Predictions Evaluated: {s['total']}
-"
+                f"Prediction Accuracy\n\n"
+                f"All-time Accuracy: {s['accuracy']}%\n"
+                f"Predictions Evaluated: {s['total']}\n"
                 f"Mistakes: {s['wrong']}"
             )
 
@@ -839,13 +835,9 @@ class TelegramBot:
             fs = self.tracker.full_stats()
             today_total = self.tracker.log_count_today()
             reply(
-                f"Today's Statistics
-
-"
-                f"Accuracy Today: {st['accuracy']}%
-"
-                f"Signals Sent: {today_total}
-"
+                f"Today's Statistics\n\n"
+                f"Accuracy Today: {st['accuracy']}%\n"
+                f"Signals Sent: {today_total}\n"
                 f"Pending Signals: {fs['pending']}"
             )
 
@@ -853,13 +845,9 @@ class TelegramBot:
             info = getattr(self, "last_signal_info", None)
             if info:
                 reply(
-                    f"Last Prediction
-
-"
-                    f"Direction: {info['direction']}
-"
-                    f"Price: ${info['price']:,.2f}
-"
+                    f"Last Prediction\n\n"
+                    f"Direction: {info['direction']}\n"
+                    f"Price: ${info['price']:,.2f}\n"
                     f"Time: {info['time']}"
                 )
             else:
@@ -872,32 +860,20 @@ class TelegramBot:
             running_str = "LIVE" if self._prediction_running else "STOPPED"
             
             reply(
-                f"System Status
-
-"
-                f"Engine: {running_str}
-"
-                f"Data Source: Coinbase WebSocket
-"
-                f"Symbol: BTC-USD
-
-"
-                f"CPU Usage: {cpu_usage}%
-"
+                f"System Status\n\n"
+                f"Engine: {running_str}\n"
+                f"Data Source: Coinbase WebSocket\n"
+                f"Symbol: BTC-USD\n\n"
+                f"CPU Usage: {cpu_usage}%\n"
                 f"Memory Usage: {mem_usage}%"
             )
 
         elif cmd == "/predictions":
             fs = self.tracker.full_stats()
             reply(
-                f"Recent Predictions
-
-"
-                f"Total Evaluated: {fs['total']}
-"
-                f"Pending: {fs['pending']}
-
-"
+                f"Recent Predictions\n\n"
+                f"Total Evaluated: {fs['total']}\n"
+                f"Pending: {fs['pending']}\n\n"
                 f"Use /last to view the most recent signal."
             )
 
@@ -908,16 +884,10 @@ class TelegramBot:
             models_loaded = sum(1 for s in status.values() if s['loaded'])
             
             reply(
-                f"Model Health
-
-"
-                f"Models Loaded: {models_loaded}
-"
-                f"Model Type: XGBoost
-"
-                f"Training Dataset: Binance 5-year data
-
-"
+                f"Model Health\n\n"
+                f"Models Loaded: {models_loaded}\n"
+                f"Model Type: XGBoost\n"
+                f"Training Dataset: Binance 5-year data\n\n"
                 f"/status shows system health metrics."
             )
 
@@ -928,13 +898,9 @@ class TelegramBot:
             models_loaded = sum(1 for s in status.values() if s['loaded'])
             
             reply(
-                f"Model Information
-
-"
-                f"Architecture: XGBoost
-"
-                f"Training Data: Binance 5-year data
-"
+                f"Model Information\n\n"
+                f"Architecture: XGBoost\n"
+                f"Training Data: Binance 5-year data\n"
                 f"Models Loaded: {models_loaded}"
             )
 
@@ -948,64 +914,34 @@ class TelegramBot:
             models_loaded = sum(1 for s in status.values() if s['loaded'])
             
             reply(
-                f"BTC Prediction Arena Dashboard
-
-"
-                f"Status: LIVE
-"
-                f"Accuracy: {fs['accuracy']}%
-"
-                f"Predictions Evaluated: {fs['total']}
-
-"
-                f"Today Accuracy: {st['accuracy']}%
-"
-                f"Signals Sent Today: {today_total}
-
-"
+                f"BTC Prediction Arena Dashboard\n\n"
+                f"Status: LIVE\n"
+                f"Accuracy: {fs['accuracy']}%\n"
+                f"Predictions Evaluated: {fs['total']}\n\n"
+                f"Today Accuracy: {st['accuracy']}%\n"
+                f"Signals Sent Today: {today_total}\n\n"
                 f"Models Loaded: {models_loaded}"
             )
 
         elif cmd == "/help":
             reply(
-                f"BTC Prediction Arena Commands
-
-"
-                f"Public
-
-"
-                f"/accuracy
-"
-                f"/stats
-"
-                f"/statstoday
-"
-                f"/status
-"
-                f"/last
-"
-                f"/predictions
-"
-                f"/health
-"
-                f"/model
-"
-                f"/dashboard
-
-"
-                f"Admin
-
-"
-                f"/setthreshold
-"
-                f"/forcesignal
-"
-                f"/retrain
-"
-                f"/logs
-"
-                f"/broadcast
-"
+                f"BTC Prediction Arena Commands\n\n"
+                f"Public\n\n"
+                f"/accuracy\n"
+                f"/stats\n"
+                f"/statstoday\n"
+                f"/status\n"
+                f"/last\n"
+                f"/predictions\n"
+                f"/health\n"
+                f"/model\n"
+                f"/dashboard\n\n"
+                f"Admin\n\n"
+                f"/setthreshold\n"
+                f"/forcesignal\n"
+                f"/retrain\n"
+                f"/logs\n"
+                f"/broadcast\n"
                 f"/resetstats"
             )
 
@@ -1018,9 +954,7 @@ class TelegramBot:
                 val = float(parts[1]) / 100.0
                 set_confidence_thresh(val)
                 reply(
-                    f"Confidence Threshold Updated
-
-"
+                    f"Confidence Threshold Updated\n\n"
                     f"New Threshold: {val*100:.0f}%"
                 )
             except (IndexError, ValueError):
@@ -1033,9 +967,7 @@ class TelegramBot:
                 import threading
                 threading.Thread(target=self._force_signal_cb, daemon=True).start()
                 reply(
-                    f"Manual Signal Triggered
-
-"
+                    f"Manual Signal Triggered\n\n"
                     f"Generating prediction for BTC-USD."
                 )
 
@@ -1043,9 +975,7 @@ class TelegramBot:
             if not self._is_admin(user_id):
                 admin_only(); return
             reply(
-                f"Model Retraining Started
-
-"
+                f"Model Retraining Started\n\n"
                 f"Training models using latest dataset."
             )
             import threading
@@ -1054,9 +984,7 @@ class TelegramBot:
         elif cmd == "/logs":
             if not self._is_admin(user_id):
                 admin_only(); return
-            reply(f"System Logs
-
-Displaying latest system log entries.")
+            reply(f"System Logs\n\nDisplaying latest system log entries.")
 
         elif cmd == "/broadcast":
             if not self._is_admin(user_id):
@@ -1065,9 +993,7 @@ Displaying latest system log entries.")
             if len(parts) >= 2:
                 self.send(parts[1], parse_mode="")
                 reply(
-                    f"Broadcast Message Sent
-
-"
+                    f"Broadcast Message Sent\n\n"
                     f"Message delivered to all configured chats."
                 )
 
@@ -1081,9 +1007,7 @@ Displaying latest system log entries.")
                     except: pass
             self.tracker.__init__()
             reply(
-                f"Statistics Reset
-
-"
+                f"Statistics Reset\n\n"
                 f"Prediction performance counters have been cleared."
             )
         else:
